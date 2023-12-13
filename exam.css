@@ -1,0 +1,354 @@
+   /*-----aendrealleelementer-------*/
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+/*------------baggrund----------------*/
+body{
+    background: rgb(255, 255, 255);
+    color: black;
+}
+/*-------------baggrundsbillede--------*/
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("macbookeget.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/*--------------navigationscontainer----*/
+
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.logo{
+    width: 240px;
+    height: auto;
+    display: inline-block;
+}
+nav ul li{
+    display: inline-block; 
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: rgb(252, 124, 188);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+  
+/*------------headertekst--------*/
+.header-text{
+    margin-top: 20%;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+.header-text h1{
+    font-size: 50px;
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+}
+.header-text span{
+    color: rgb(252, 124, 188);
+}
+/*--------------om_mig------------*/
+#ommig{
+    padding: 80px 0;
+    color: rgb(0, 0, 0);
+    
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+/*----------billedeafmig----------*/
+.aboutbillede{
+    flex-basis: 35%;
+
+}
+.aboutbillede img{
+    width: 100%;
+    border-radius: 15px;
+}
+/*------------tekstommig------------*/
+.about-col-2{
+    flex-basis: 60%;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.undertitelommig{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(252, 124, 188);
+    font-family: 'Inter', sans-serif;
+}
+/*------------kompetencer-----------------*/
+#kompetencer{
+    padding: 30px 0;
+    
+
+}
+.undertitelkompetencer{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(252, 124, 188);
+    font-family: 'Inter', sans-serif;
+}
+.kompetencer-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 10px;
+    
+}
+.kompetencer-list div{
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    border-radius: 10px; /*Hjørnerne bliver runde*/
+    transition: background 0.5s,transform 0.5s;
+}
+.kompetencer-list div h2{
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: rgb(0, 0, 0);
+    font-family: 'Playfair Display', serif;
+    
+}
+.kompetencer-list p{
+    font-family: 'Open Sans', sans-serif;
+}
+.kompetencerlogo{
+    display: flex;
+    justify-content: space-around;
+}
+.kompetencerlogo img{
+    width: 75%;
+    height: auto;
+}
+
+/*-----------portfolio---------*/
+#portfolio{
+    padding: 50px 0; /*50px fra top og bund, 0px fra højre og venstre*/
+
+}
+.undertitelportfolio{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(252, 124, 188);
+    font-family: 'Inter', sans-serif;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position:relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgb(139, 137, 138));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+
+}
+.layer p{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+/*---------kontakt-------*/
+
+.arrow{
+    width: 250px;
+    height: auto;
+    position: relative;
+    right: -200px;
+    bottom: -200px;
+}
+.contact{
+    flex-basis: 35%;
+}
+.undertitelkontakt{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(252, 124, 188);
+    font-family: 'Inter', sans-serif;
+}
+
+
+.contact p{
+    margin-top: 30px;
+}
+.contact p i{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px; 
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: black;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: rgb(252, 124, 188);
+    transform: translateY(-5px); /*går minus 5 px op af y aksen*/
+}
+/*------------css for small screen-----------*/
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    #header{
+        background-image: url(macbookeget.png);
+    } 
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background-color: rgb(0, 0, 0);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+    }
+    .kompetencerlogo img{
+        width: 100%;
+        height: auto;
+        padding-top: 50px;
+    }
+    
+    .undertitel{
+        font-size: 40px;
+    }
+    .undertitelkompetencer{
+        text-align: left;
+    }
+    .kompetencer-list div{
+        padding: 0px;
+    }
+    .undertitelportfolio{
+        text-align: left;
+    }
+    .undertitelkontakt{
+        text-align: left;
+    }
+    .row{
+        display: block;
+    }
+    .aboutbillede, .about-col-2{
+        width: auto;
+    }
+    .aboutbillede{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+        width: 90%;
+    }
+}
+
