@@ -17,7 +17,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url("macbookeget.png");
+    background-image: url("images/macbookeget.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -27,6 +27,7 @@ body{
 .container{
     padding: 10px 10%;
 }
+
 nav{
     display: flex;
     align-items: center;
@@ -90,8 +91,9 @@ nav ul li a:hover::after{
 }
 .row{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: nowrap;
+    gap: 45px;
 }
 /*----------billedeafmig----------*/
 .aboutbillede{
@@ -107,7 +109,7 @@ nav ul li a:hover::after{
     flex-basis: 60%;
     font-family: 'Open Sans', sans-serif;
     width: 100%;
-    font-size: 20px;
+    font-size: 17px;
     color: rgb(0, 0, 0);
 }
 
@@ -140,7 +142,7 @@ nav ul li a:hover::after{
 .kompetencer-list div{
     background-color: rgb(255, 255, 255);
     padding: 40px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 300;
     color: rgb(0, 0, 0);
     border-radius: 10px; /*Hjørnerne bliver runde*/
@@ -177,13 +179,13 @@ nav ul li a:hover::after{
     font-weight: 600;
     color: rgb(252, 124, 188);
     font-family: 'Inter', sans-serif;
+    padding-bottom: 27px;
 }
 .work-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap:40px;
-    margin-bottom: 15px;
-    margin-top: 50px;
+    grid-gap: 40px;
+    margin-top: 40px;
 }
 .work{
     border-radius: 10px;
@@ -232,13 +234,15 @@ nav ul li a:hover::after{
     height: 100%;
 }
 /*---------kontakt-------*/
-
+#kontakt{
+    margin-top: -367px;
+}
 .arrow{
     width: 250px;
     height: auto;
     position: relative;
-    right: -200px;
-    bottom: -200px;
+    right: -257px;
+    bottom: -194px;
 }
 .contact{
     flex-basis: 35%;
@@ -248,11 +252,15 @@ nav ul li a:hover::after{
     font-weight: 600;
     color: rgb(252, 124, 188);
     font-family: 'Inter', sans-serif;
+    text-align: center;
+
 }
 
 
 .contact p{
     margin-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
 }
 .contact p i{
     color: rgb(0, 0, 0);
@@ -261,6 +269,8 @@ nav ul li a:hover::after{
 }
 .social-icons{
     margin-top: 30px; 
+    display: flex;
+    justify-content: center;
 }
 .social-icons a{
     text-decoration: none;
@@ -281,7 +291,7 @@ nav .fas{
 
 @media only screen and (max-width:600px){
     #header{
-        background-image: url(macbookeget.png);
+        background-image: url(images/billedesmallscreen.png);
     } 
     .header-text{
         margin-top: 100%;
