@@ -17,7 +17,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url("images/macbookeget.png");
+    background-image: url("images/macbookeget.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -291,7 +291,7 @@ nav .fas{
 
 @media only screen and (max-width:600px){
     #header{
-        background-image: url(images/billedesmallscreen.png);
+        background-image: url(images/billedesmallscreen.jpg);
     } 
     .header-text{
         margin-top: 100%;
